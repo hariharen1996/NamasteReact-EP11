@@ -1,0 +1,36 @@
+Assignment - 11
+
+Theory:
+
+1. What is prop drilling?
+The passing of props from one component to another component is prop drilling, that is passing the props from parent component to sub child component and passing props down multiple levels to a nested component, through components that don't need it.
+
+2. What is lifting the state up?
+
+Lifting state up is an important pattern, where we can just lift the state up to the closest common ancestor and pass both the state variables the state values down as well as any callbacks to update that state.
+
+3. What is context provider and context consumer?
+The context provider is used to provide/pass the data or state to multiple components and context consumer is used to consume or access the data in our component
+In funcional component we can use useContext provided by react library and in class component we can use consumer.
+
+Provider:
+<ComponentName.Provider value={{state: state, setState: setState}}>
+  <Header />
+</ComponentName.Provider>
+
+Consumer:
+Funcional Component
+const { state,setState } = useContext(ComponentName)
+Class Component
+<ComponentName.Consumer>
+    {({state}) => <h1>{state}</h1>}
+</ComponentName.Consumer>
+
+
+4. if your dont pass a value to provider does it take default value?
+It will take default values, if we dont override it.
+
+Coding
+
+1. Practice React Context with code examples
+2. Try out nested contexts
